@@ -1,3 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: rgb(225,223,194);
+    }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+  }
+
+  li {
+    padding-left: 30px;
+    padding-right: 5px;
+  }
+
+  #navbar {
+    background-color: grey;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #welcome-section {
+    display: relative;
+    background-color: LightGrey;
+    font-size: 200%;
+    width: 100%;
+    height: 100vh;
+    color: #0489B1;
+    text-align: center;
+  }
+
+  #projects {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+
+  @media (max-width: 800px) {
+    #projects {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  #profile {
+    margin-top: 40px;
+    margin-left: 47%;
+    text-align: center;
+    width: 80px;
+  }
+
+  #profile-link {}
+
+  .project-tile {
+    background-color: #0489B1;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+  }
+</style>
+</head>
+
+<body>
 <nav id="navbar">
   <ul>
     <li><a href="#welcome-section">About</a></li>
@@ -30,3 +109,6 @@
     <img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" atl="github_logo" width="110%" height="110%">
   </a>
 </section>
+</body>
+
+</html>

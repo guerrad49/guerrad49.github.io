@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-	header {
+    header {
     	background-color: grey;
         text-align: center;
         color: white;
@@ -35,8 +35,8 @@
     	#left, #right {
         	background-color: rgba(160,200,250,0.4);
         	width: 100%;
-            }
-    }
+            	}
+    	}
 </style>
 </head>
 
@@ -46,7 +46,7 @@
 <p>In this page, we'll discuss some techniques for computing limits (when possible).</p>
 
 <nav>
-	<ul>
+    <ul>
     	<li><a href="#">Geometric Limits</a></li>
         <li><a href="#">Numerical Limits</a></li>
         <li><a href="#">Algebraic Limits</a></li>
@@ -61,7 +61,7 @@
 
 <div style="height:450px">
 <section class="shadow" id="left">
-	<h4 class="blue-box">Example 1</h4>
+    <h4 class="blue-box">Example 1</h4>
     <p>Evaluate the limit: 
 	<a style="padding-left: 5px; vertical-align: -75%;"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to&space;0^-}&space;\frac{1}{x}" title="example 1" /></a></p>
     
@@ -74,7 +74,7 @@
 </section>
 
 <aside class="shadow" id="right">
-	<h4 class="blue-box">Example 2</h4>
+    <h4 class="blue-box">Example 2</h4>
     <p>Evaluate the limit: 
 	<a style="padding-left: 5px; vertical-align: -75%"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to&space;3^&plus;}&space;\frac{x}{x-3}" title="example 2" /></a></p>
     
@@ -90,7 +90,7 @@
 <hr>
 
 <header>
-	<h2>Numerical Limits</h2>
+    <h2>Numerical Limits</h2>
 </header>
 <p>The numerical approach focuses on analyzing outputs.</p>
 
@@ -99,26 +99,26 @@
 	<h4 class="blue-box">Example 3</h4>
     <p>Evaluate the limit: 
     <a style="padding-left: 5px; vertical-align: -75%"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to&space;1^-}&space;\frac{2}{1-x}" title="example 3" /></a>
-	</p>
+    </p>
     
     <h4>Solution:</h4>
     <div style="float:right; padding-right: 5px; padding-left: 10px">
     	<img src="https://latex.codecogs.com/gif.latex?\begin{tabular}&space;{||c&space;c||}&space;\hline&space;x&space;&&space;f(x)&space;\\&space;[0.5ex]&space;\hline\hline&space;0&space;&&space;2&space;\\&space;\hline&space;0.5&space;&&space;4&space;\\&space;\hline&space;0.9&space;&&space;20&space;\\&space;\hline&space;0.99&space;&&space;200&space;\\&space;\hline&space;0.999&space;&&space;2000&space;\\&space;\hline&space;\end{tabular}" title="table 3" />
-   	</div>
+    </div>
     <p>We need to analyze the outputs of the function as our <i>x</i> values approach 1 from the <b>left</b>. Reading the table from top to bottom, we choose <i>x</i> values that satisfy this requirement. Then, we plug in each input to determine its output which are shown in the <i>f</i>(<i>x</i>) column.</p>
     <p>Observing the output column, we notice that the outputs are <u>increasing with no bound</u>. Thus, we determine that the limi is positive infinity (<img src="https://latex.codecogs.com/gif.latex?&plus;\infty" title="positive infinity" />)</p>
 </section>
 
 <aside class="shadow" id="right">
-	<h4 class="blue-box">Example 4</h4>
+    <h4 class="blue-box">Example 4</h4>
     <p>Evaluate the limit: 
     <a style="padding-left: 5px; vertical-align: -75%"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to\infty}&space;\frac{2x}{x-3}" title="\lim_{x \to\infty} \frac{2x}{x-3}" /></a>
-	</p>
+    </p>
     
     <h4>Solution:</h4>
     <div style="float:right; padding-right: 5px; padding-left: 10px">
     	<img src="https://latex.codecogs.com/gif.latex?\begin{tabular}&space;{||c&space;c||}&space;\hline&space;x&space;&&space;g(x)&space;\\&space;[0.5ex]&space;\hline\hline&space;10&space;&&space;2.85714&space;\\&space;\hline&space;100&space;&&space;2.06185&space;\\&space;\hline&space;1000&space;&&space;2.00601&space;\\&space;\hline&space;10000&space;&&space;2.00060&space;\\&space;\hline&space;100000&space;&&space;2.00006&space;\\&space;\hline&space;\end{tabular}" title="table 4" />
-   	</div>
+    </div>
     <p>In this case, our <i>x</i> values approach positive infinity. Notice how the values for the <i>x</i> column were chosen so they increase fast and are also convenient for us to use. Analyzing outputs in the <i>f</i>(<i>x</i>) column, we see that the limit is 2.</p>
 </aside>
 </div>

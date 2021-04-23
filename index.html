@@ -1,133 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-    header {
-    	background-color: grey;
-        text-align: center;
-        color: white;
-        }
-    h4 {
-        position: relative;
-        bottom: 10px;
-        left: 2px;
-        }
-    .blue-box {
-    	background-color: rgb(160,200,250);
-        width: 80px;
-        }
-    .shadow {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        }
-    #left {
-    	float: left;
-        width: 48%;
-        background-color: rgba(160,200,250,0.4);
-        padding: 2px;
-        }
-    #right {
-    	float: right;
-        width: 48%;
-        background-color: rgba(160,200,250,0.4);
-        padding: 2px;
-        }
-    @media (max-width: 800px) {
-    	#left, #right {
-        	background-color: rgba(160,200,250,0.4);
-        	width: 100%;
-            	}
-    	}
-</style>
-</head>
-
-<body>
-
-<h2>Introduction to Limits</h2>
-<p>In this page, we'll discuss some techniques for computing limits (when possible).</p>
-
-<nav>
-    <ul>
-    	<li><a href="#">Geometric Limits</a></li>
-        <li><a href="#">Numerical Limits</a></li>
-        <li><a href="#">Algebraic Limits</a></li>
-    </ul>
+<nav id="navbar">
+  <ul>
+    <li><a href="#welcome-section">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#profile">Profile</a></li>
+  </ul>
 </nav>
-<hr>
 
-<header>
-	<h2>Geometric Limits</h2>
-</header>
-<p>Here we discuss a visual (geometric) approach.</p>
-
-<div style="height:450px">
-<section class="shadow" id="left">
-    <h4 class="blue-box">Example 1</h4>
-    <p>Evaluate the limit: 
-	<a style="padding-left: 5px; vertical-align: -75%;"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to&space;0^-}&space;\frac{1}{x}" title="example 1" /></a></p>
-    
-    <h4>Solution:</h4>
-    <div style="float:right; padding-right: 5px; padding-left: 10px">
-    	<iframe src="https://www.desmos.com/calculator/tdjhphxur4?embed" width="250px" height="250px" style="border: 1px solid #ccc" frameborder=0></iframe>
-    </div>
-    <p>The animation shows how a loop of how a point changes as its <i>x</i> ranges from -10 to 0. We only need focus on the left "half" since we are asked to analyze the behavior as <i>x</i> approaches 0 from the <b>left</b>.</p>
-    <p>The limit determines the behavior of the <i>y</i> values. Notice that the <i>y</i> values <u>decrease with no bound</u> as the point gets closer to the vertical asymptote at <i>x</i> = 0. Hence, we observe that the limit is negative infinity (<img src="https://latex.codecogs.com/gif.latex?-\infty" title="negative infinity" />).</p>
+<section id="welcome-section">
+  <h1>Welcome</h1>
 </section>
 
-<aside class="shadow" id="right">
-    <h4 class="blue-box">Example 2</h4>
-    <p>Evaluate the limit: 
-	<a style="padding-left: 5px; vertical-align: -75%"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to&space;3^&plus;}&space;\frac{x}{x-3}" title="example 2" /></a></p>
-    
-    <h4>Solution:</h4>
-    <div style="float:right; padding-right: 5px; padding-left: 10px">
-        <iframe src="https://www.desmos.com/calculator/0qb0tdlbzq?embed" width="250px" height="250px" style="border: 1px solid #ccc" frameborder=0></iframe>
-    </div>
-    <p>The animation now focuses on a point approaching the vertical asymptote at <i>x</i> = 3 from the <b>right</b>.
-    <p>We observe that the <i>y</i> values of the moving point are <u>increasing with no bound</u> as we get closer to the asymptote. Hence, the limit is positive infinity (<img src="https://latex.codecogs.com/gif.latex?&plus;\infty" title="positive infinity" />)</p>
-</aside>
-</div>
-
-<hr>
-
-<header>
-    <h2>Numerical Limits</h2>
-</header>
-<p>The numerical approach focuses on analyzing outputs.</p>
-
-<div style="height:450px">
-<section class="shadow" id="left">
-	<h4 class="blue-box">Example 3</h4>
-    <p>Evaluate the limit: 
-    <a style="padding-left: 5px; vertical-align: -75%"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to&space;1^-}&space;\frac{2}{1-x}" title="example 3" /></a>
-    </p>
-    
-    <h4>Solution:</h4>
-    <div style="float:right; padding-right: 5px; padding-left: 10px">
-    	<img src="https://latex.codecogs.com/gif.latex?\begin{tabular}&space;{||c&space;c||}&space;\hline&space;x&space;&&space;f(x)&space;\\&space;[0.5ex]&space;\hline\hline&space;0&space;&&space;2&space;\\&space;\hline&space;0.5&space;&&space;4&space;\\&space;\hline&space;0.9&space;&&space;20&space;\\&space;\hline&space;0.99&space;&&space;200&space;\\&space;\hline&space;0.999&space;&&space;2000&space;\\&space;\hline&space;\end{tabular}" title="table 3" />
-    </div>
-    <p>We need to analyze the outputs of the function as our <i>x</i> values approach 1 from the <b>left</b>. Reading the table from top to bottom, we choose <i>x</i> values that satisfy this requirement. Then, we plug in each input to determine its output which are shown in the <i>f</i>(<i>x</i>) column.</p>
-    <p>Observing the output column, we notice that the outputs are <u>increasing with no bound</u>. Thus, we determine that the limi is positive infinity (<img src="https://latex.codecogs.com/gif.latex?&plus;\infty" title="positive infinity" />)</p>
+<section id="projects">
+  <div class="project-tile">
+    <a href="https://codepen.io/ndegtrx/full/LYNKwmV" target="_blank">Tribute Page</a>
+  </div>
+  <div class="project-tile">
+    <a href="https://codepen.io/ndegtrx/full/NWNQWWW" target="_blank">Survey Form</a>
+  </div>
+  <div class="project-tile">
+    <a href="https://codepen.io/ndegtrx/full/XWdvmmg" target="_blank">Product Landing Page</a>
+  </div>
+  <div class="project-tile">
+    <a href="https://codepen.io/ndegtrx/full/bGebPOG" target="_blank">Technical Documentation Page</a>
+  </div>
 </section>
 
-<aside class="shadow" id="right">
-    <h4 class="blue-box">Example 4</h4>
-    <p>Evaluate the limit: 
-    <a style="padding-left: 5px; vertical-align: -75%"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\to\infty}&space;\frac{2x}{x-3}" title="\lim_{x \to\infty} \frac{2x}{x-3}" /></a>
-    </p>
-    
-    <h4>Solution:</h4>
-    <div style="float:right; padding-right: 5px; padding-left: 10px">
-    	<img src="https://latex.codecogs.com/gif.latex?\begin{tabular}&space;{||c&space;c||}&space;\hline&space;x&space;&&space;g(x)&space;\\&space;[0.5ex]&space;\hline\hline&space;10&space;&&space;2.85714&space;\\&space;\hline&space;100&space;&&space;2.06185&space;\\&space;\hline&space;1000&space;&&space;2.00601&space;\\&space;\hline&space;10000&space;&&space;2.00060&space;\\&space;\hline&space;100000&space;&&space;2.00006&space;\\&space;\hline&space;\end{tabular}" title="table 4" />
-    </div>
-    <p>In this case, our <i>x</i> values approach positive infinity. Notice how the values for the <i>x</i> column were chosen so they increase fast and are also convenient for us to use. Analyzing outputs in the <i>f</i>(<i>x</i>) column, we see that the limit is 2.</p>
-</aside>
-</div>
-
-<hr>
-
-<header>
-	<h2>Algebraic Limits</h2>
-</header>
-
-</body>
-</html>
+<section id="profile">
+  <a id="profile-link" href="https://github.com/guerrad49" target="_blank">
+    <img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" atl="github_logo" width="110%" height="110%">
+  </a>
+</section>

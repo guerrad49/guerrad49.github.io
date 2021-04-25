@@ -1,114 +1,136 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <style>
-  body {
-    background-color: rgb(225,223,194);
-    }
+* {
+  box-sizing: border-box;
+}
 
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 120%;
-    font-weight: bold;
-  }
+header {
+  background-color: #003766;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #FBEC5D;
+  padding: 40px;
+  font-size: 40px;
+}
 
-  ul {
-    display: flex;
-    list-style-type: none;
-    margin: 10px;
-  }
+section {
+  background-color: #003766;
+}
 
-  li {
-    padding-left: 30px;
-    padding-right: 5px;
-  }
+h3 {
+  color: #FBEC5D;
+  text-align: center;
+}
 
-  #navbar {
-    background-color: grey;
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
+.box {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
 
-  #welcome-section {
-    display: relative;
-    background-color: LightGrey;
-    font-size: 200%;
-    width: 100%;
-    height: 25%;
-    color: #0489B1;
-    text-align: center;
-  }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-  #projects {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
-  }
+.navbar {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #FBEC5D;
+}
 
-  @media (max-width: 800px) {
-    #projects {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+.navbar li {
+  display: inline-block;
+  font-size: 20px;
+}
 
-  #profile {
-    margin-top: 40px;
-    margin-left: 47%;
-    text-align: center;
-    width: 80px;
-  }
+.navbar li a {
+  color: #003766;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+}
 
-  #profile-link {}
+.navbar li a:hover {
+  background-color: #C7B405;
+}
 
-  .project-tile {
-    background-color: #0489B1;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    width: 50%;
-  }
+#profiles {
+  text-align: center;
+}
+
+#badge-img {
+  border: 5px double #FBEC5D;
+  width: 400px;
+  height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
 </head>
 
 <body>
-<nav id="navbar">
-  <ul>
-    <li><a href="#welcome-section">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#profile">Profile</a></li>
-  </ul>
-</nav>
+<header>
+  <h1>David Guerra</h1>
+</header>
 
-<section id="welcome-section">
-  <h1>Welcome</h1>
+<ul class="navbar">
+  <li><a href="#About">About</a></li>
+  <li><a href="#HTML">HTML</a></li>
+  <li><a href="#Java">Java</a></li>
+  <li><a href="#Python">Python</a></li>
+  <li><a href="#profiles">Links</a></li>
+</ul>
+
+<section class="clearfix">
+  <div class="box">
+    <h3>Technical Documentation Page</h3>
+    <a href="https://codepen.io/ndegtrx/full/bGebPOG" target="_blank">
+      <img id="badge-img" src="tech.PNG">
+    </a>
+  </div>
+  <div class="box">
+    <h3>Product Landing Page</h3>
+    <a href="https://codepen.io/ndegtrx/full/XWdvmmg" target="_blank">
+      <img id="badge-img" src="landing.PNG">
+    </a>
+  </div>
+</section>
+<section class="clearfix">
+  <div class="box">
+    <h3>Tribute Page</h3>
+    <a href="https://codepen.io/ndegtrx/full/LYNKwmV" target="_blank">
+      <img id="badge-img" src="tribute.PNG">
+    </a>
+  </div>
+  <div class="box">
+    <h3>Survey Form</h3>
+    <a href="https://codepen.io/ndegtrx/full/NWNQWWW" target="_blank">
+      <img id="badge-img" src="survey.PNG" alt="Survey Form">
+    </a>
+  </div>
 </section>
 
-<section id="projects">
-  <div class="project-tile">
-    <a href="https://codepen.io/ndegtrx/full/LYNKwmV" target="_blank">Tribute Page</a>
-  </div>
-  <div class="project-tile">
-    <a href="https://codepen.io/ndegtrx/full/NWNQWWW" target="_blank">Survey Form</a>
-  </div>
-  <div class="project-tile">
-    <a href="https://codepen.io/ndegtrx/full/XWdvmmg" target="_blank">Product Landing Page</a>
-  </div>
-  <div class="project-tile">
-    <a href="https://codepen.io/ndegtrx/full/bGebPOG" target="_blank">Technical Documentation Page</a>
-  </div>
-</section>
-
-<section id="profile">
-  <a id="profile-link" href="https://github.com/guerrad49" target="_blank">
-    <img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" atl="github_logo" width="110%" height="110%">
+<footer id="profiles">
+  <a href="https://www.linkedin.com/in/david-guerra-20b518a0" target="_blank">
+    <img src="https://1000logos.net/wp-content/uploads/2017/03/Linkedin-Logo-500x313.png" atl="linked_in_logo" width="8%" height="8%" hspace="25">
   </a>
-</section>
+  <a href="https://github.com/guerrad49" target="_blank">
+    <img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" atl="github_logo" width="8%" height="8%">
+  </a>
+  </li>
+</footer>
+
 </body>
+
 
 </html>
